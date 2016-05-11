@@ -11,14 +11,14 @@ text {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var diameter = 960,
+var diameter = 2960,
     format = d3.format(",d"),
     color = d3.scale.category20c();
 
 var bubble = d3.layout.pack()
     .sort(null)
     .size([diameter, diameter])
-    .padding(1.5);
+    .padding(2.5);
 
 var svg = d3.select("body").append("svg")
     .attr("width", diameter)
