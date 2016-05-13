@@ -16,7 +16,7 @@ var diameter = 2960,
     color = d3.scale
               .linear()
               .domain([1, 25]) //definisci il range su cui colorare, togli questa riga se vuoi farlo da 0 a valore max
-              .range(['red','green']);
+              .range(['#f7fbff','#08306b']);
 
 var bubble = d3.layout.pack()
     .sort(null)
