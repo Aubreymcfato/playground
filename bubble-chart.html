@@ -13,10 +13,25 @@
 <body>
   <div id="bubble-chart"></div>
   <script>
-   // Define the dimensions and margins of the chart
-var margin = {top: 30, right: 50, bottom: 50, left: 50},
-    width = 800 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+   // Define the data
+var data = [
+  {title: "Avengers: Endgame", year: 2019, profit: 2.798},
+  {title: "Avatar", year: 2009, profit: 2.789},
+  {title: "Star Wars: The Force Awakens", year: 2015, profit: 2.068},
+  {title: "Avengers: Infinity War", year: 2018, profit: 2.048},
+  {title: "Jurassic World", year: 2015, profit: 1.668},
+  {title: "The Lion King", year: 2019, profit: 1.657},
+  {title: "The Avengers", year: 2012, profit: 1.519},
+  {title: "Furious 7", year: 2015, profit: 1.516},
+  {title: "Frozen II", year: 2019, profit: 1.450},
+  {title: "Beauty and the Beast", year: 2017, profit: 1.263},
+];
+
+// Define the dimensions and margins of the chart
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 600 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
 
 // Append the SVG object to the div with ID "bubble-chart"
 var svg = d3.select("#bubble-chart")
@@ -45,7 +60,7 @@ svg.append("g")
 // Add a scale for bubble size
 var z = d3.scaleSqrt()
   .domain([0, d3.max(data, function(d) { return +d.profit; })])
-  .range([2, 40]);
+  .range([5, 50]); // update range
 
 // Add bubbles
 var bubbles = svg.selectAll("bubble")
@@ -74,3 +89,5 @@ svg.selectAll("labels")
   </script>
 </body>
 </html>
+
+
