@@ -18,7 +18,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // Append the SVG object to the body of the page
-var svg = d3.select("body")
+var svg = d3.select("#chart")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -67,4 +67,5 @@ svg.selectAll("labels")
     .attr("y", function(d){ return y(d.profit); })
     .text(function(d){ return d.title; })
     .attr("text-anchor", "middle")
-    .attr("dy", "1
+    .attr("dy", "1")
+    .style
