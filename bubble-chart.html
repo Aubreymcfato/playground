@@ -1,4 +1,19 @@
-// Define the data
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    #bubble-chart {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bubble-chart"></div>
+  <script>
+   // Define the data
 var data = [
   {title: "Avengers: Endgame", year: 2019, profit: 2.798},
   {title: "Avatar", year: 2009, profit: 2.789},
@@ -67,4 +82,8 @@ svg.selectAll("labels")
     .attr("y", function(d){ return y(d.profit); })
     .text(function(d){ return d.title; })
     .attr("text-anchor", "middle")
-    .attr
+    .style("fill", "black"); // Added in latest version
+
+  </script>
+</body>
+</html>
